@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./Picture1.png";
+import logo from "./sd-photo.jpeg";
 import "./App.css";
 
 class App extends Component {
@@ -15,37 +15,37 @@ class App extends Component {
                 if (endpoint === "initial") {
                     this.setState({ apiResponse: res });
                 }
-                if (endpoint === "subject") {
+                if (endpoint === "profile") {
                     this.setState({ subjectResponse: res });
-                } else if (endpoint === "project") {
+                } else if (endpoint === "hobbies") {
                     this.setState({ projectResponse: res });
                 }
             })
             .catch(err => console.error(err));
     }
 
-    componentDidMount() {
-        this.callAPI("initial");
-    }
+    // componentDidMount() {
+    //     this.callAPI("initial");
+    // }
 
     render() {
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Web app for term project</h1>
-                    <p className="App-intro">{this.state.apiResponse}</p>
+                    <h1 className="App-title">Sneashish Das portfoloio</h1>
+                    {/* <p className="App-intro">{this.state.apiResponse}</p> */}
                     <div className="parent-button">
-                        <button className="child-button" onClick={() => this.callAPI("subject")}>
-                            Get Subject details from backend
+                        <button className="child-button" onClick={() => this.callAPI("profile")}>
+                            My profile Summary
                         </button>
-                        <button className="child-button" onClick={() => this.callAPI("project")}>
-                            Get project details from backend
+                        <button className="child-button" onClick={() => this.callAPI("hobbies")}>
+                            My hobbies
                         </button>
                     </div>
                     <div>
-                        <p>{this.state.subjectResponse}</p>
-                        <p>{this.state.projectResponse}</p>
+                        <p className="api-res">{this.state.subjectResponse}</p>
+                        <p className="api-res">{this.state.projectResponse}</p>
                     </div>
                 </header>
             </div>

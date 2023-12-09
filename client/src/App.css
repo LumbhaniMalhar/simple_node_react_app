@@ -23,8 +23,14 @@ button:hover {
   background-color: #2980b9;
 }
 .App-logo {
-  height: 80px;
+  /* height: 80px; */
   width: 20vw;
+}
+
+.api-res {
+  width: 60vw;
+  text-align: justify;
+  font-weight: 600;
 }
 
 .App-header {
