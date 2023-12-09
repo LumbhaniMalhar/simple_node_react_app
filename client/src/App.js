@@ -44,8 +44,8 @@ class App extends Component {
                         </button>
                     </div>
                     <div>
-                        <p>{this.state.torontoResponse}</p>
-                        <p>{this.state.jalandharResponse}</p>
+                        <p className="api-res">{this.state.torontoResponse ? `Current temperature in Toronto: ${this.state.torontoResponse}°C` : ''}</p>
+                        <p className="api-res">{this.state.jalandharResponse ? `Current temperature in Jalandhar: ${this.state.jalandharResponse}°C` : ''}</p>
                     </div>
                 </header>
             </div>

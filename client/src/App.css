@@ -46,6 +46,10 @@ button:hover {
   font-size: 1.5em;
 }
 
+.api-res {
+  font-weight: 600;
+}
+
 .App-intro {
   font-size: large;
 }

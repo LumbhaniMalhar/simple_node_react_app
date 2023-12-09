@@ -20,7 +20,7 @@ router.get("/toronto", async (req, res, next) => {
         const data = await response.json();
         const currentTemp = data?.hourly?.temperature_2m?.[0];
 
-        res.json(`Currently, temperature in Toronto is about: ${currentTemp} °C`);
+        res.json(currentTemp);
     } catch (error) {
         console.error(error);
         res.status(500).send("Internal Server Error");
@@ -33,7 +33,7 @@ router.get("/jalandhar", async (req, res, next) => {
         const data = await response.json();
         const currentTemp = data?.hourly?.temperature_2m?.[0];
 
-        res.json(`Currently, temperature in Jalandhar is about: ${currentTemp} °C`);
+        res.json(currentTemp);
     } catch (error) {
         console.error(error);
         res.status(500).send("Internal Server Error");
