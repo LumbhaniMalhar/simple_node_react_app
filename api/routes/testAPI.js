@@ -3,7 +3,7 @@ var router = express.Router();
 const fetch = require("node-fetch");
 
 router.get("/initial", function(req, res, next) {
-    res.send("Initial API called successfully");
+    res.send("Connected with backend server");
 });
 
 router.get("/subject", function(req, res, next) {

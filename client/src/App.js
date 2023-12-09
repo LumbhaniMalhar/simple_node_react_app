@@ -9,7 +9,7 @@ class App extends Component {
     }
 
     callAPI(endpoint) {
-        fetch(`http://localhost:9000/testAPI/${endpoint}`)
+        fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`)
             .then(res => res.text())
             .then(res => {
                 if (endpoint === "initial") {

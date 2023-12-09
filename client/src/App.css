@@ -42,6 +42,10 @@ button:hover {
   margin: 5px;
 }
 
+.api-res {
+  font-weight: 600;
+}
+
 .App-title {
   font-size: 1.5em;
 }
@@ -51,7 +55,7 @@ button:hover {
 }
 
 .App-intro {
-  font-size: large;
+  font-size: small;
 }
 
 @keyframes App-logo-spin {
