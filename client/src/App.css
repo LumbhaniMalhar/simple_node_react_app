@@ -23,15 +23,15 @@ button:hover {
   background-color: #2980b9;
 }
 .App-logo {
-  height: 80px;
+  /* height: 80px; */
   width: 20vw;
 }
 
 .App-header {
-  /* background-color: #222; */
+  background-color: #222;
   height: 100vh;
     /* padding: 20px; */
-  /* color: white; */
+  color: white;
   display: flex;
     flex-direction: column;
     justify-content: center;

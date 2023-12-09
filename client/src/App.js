@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import logo from "./Picture1.png";
+import logo from "./weather.png";
 import "./App.css";
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { apiResponse: "", subjectResponse: "", projectResponse: "" };
+        this.state = { apiResponse: "", torontoResponse: "", jalandharResponse: "" };
     }
 
     callAPI(endpoint) {
@@ -15,37 +15,37 @@ class App extends Component {
                 if (endpoint === "initial") {
                     this.setState({ apiResponse: res });
                 }
-                if (endpoint === "subject") {
-                    this.setState({ subjectResponse: res });
-                } else if (endpoint === "project") {
-                    this.setState({ projectResponse: res });
+                if (endpoint === "toronto") {
+                    this.setState({ torontoResponse: res });
+                } else if (endpoint === "jalandhar") {
+                    this.setState({ jalandharResponse: res });
                 }
             })
             .catch(err => console.error(err));
     }
 
-    componentDidMount() {
-        this.callAPI("initial");
-    }
+    // componentDidMount() {
+    //     this.callAPI("initial");
+    // }
 
     render() {
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Web app for term project</h1>
-                    <p className="App-intro">{this.state.apiResponse}</p>
+                    <h1 className="App-title">Get live temperature of the following cities: </h1>
+                    {/* <p className="App-intro">{this.state.apiResponse}</p> */}
                     <div className="parent-button">
-                        <button className="child-button" onClick={() => this.callAPI("subject")}>
-                            Get Subject details from backend
+                        <button className="child-button" onClick={() => this.callAPI("toronto")}>
+                            Toronto
                         </button>
-                        <button className="child-button" onClick={() => this.callAPI("project")}>
-                            Get project details from backend
+                        <button className="child-button" onClick={() => this.callAPI("jalandhar")}>
+                            Jalandhar
                         </button>
                     </div>
                     <div>
-                        <p>{this.state.subjectResponse}</p>
-                        <p>{this.state.projectResponse}</p>
+                        <p>{this.state.torontoResponse}</p>
+                        <p>{this.state.jalandharResponse}</p>
                     </div>
                 </header>
             </div>
