@@ -23,7 +23,8 @@ button:hover {
   background-color: #2980b9;
 }
 .App-logo {
-  height: 80px;
+  /* animation: App-logo-spin infinite 2s linear; */
+  /* height: 80px; */
   width: 20vw;
 }
 
@@ -42,12 +43,16 @@ button:hover {
   margin: 5px;
 }
 
+.api-res {
+  font-weight: 600;
+}
+
 .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: small;
 }
 
 @keyframes App-logo-spin {
